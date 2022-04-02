@@ -13,7 +13,7 @@ body
    display: flex;
    justify-content: center;
    align-items: center;
-   background: #222;
+   background: #F3F5FA;
    min-height: 100vh;
 }
 
@@ -24,7 +24,8 @@ body
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
-   margin: 20px;
+   margin-top: 100px;
+   margin-bottom: 60px;
 }
 
 .container .card
@@ -44,7 +45,7 @@ body
    left: 0;
    width: 100%;
    height: 100%;
-   background: #333;
+   background: #7C4FCF;
    z-index: 1;
    display: flex;
    justify-content: center;
@@ -126,6 +127,7 @@ body
    .container .card
    {
       width: 400px;
+      /* margin: 50px; */
    }
 }
 
