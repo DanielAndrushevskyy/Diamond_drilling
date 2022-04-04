@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Preference</title>
-   <link rel="stylesheet" href="preference.css">
+   <link rel="stylesheet" href="css/preference.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-   <div class="container">
-      
+<div class="wrapper">
+   <header id="header">
+      <a href="#" class="logo">Logo</a>
+      <div id="toggle"></div>
+      <div id="navbar">
+      <ul>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#preference">Переваги</a></li>
+         <li><a href="#team">Team</a></li>
+         <li><a href="#portfolio">Portfolio</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+      </div>
+   </header>
+   
+   
+   <!-- <section id="home"><iframe id="home" src="home.html" frameborder="0"></iframe></section>
+   <section id="about">About</section>
+   <section id="preference"><iframe id="preference" src="preference.html" frameborder="0"></iframe></section>
+   <section id="team">Team</section>
+   <section id="portfolio">Portfolio</section>
+   <section id="contact">Contact</section> -->
+
+   <script>
+      const header = document.getElementById('header')
+      const toggle = document.getElementById('toggle');
+      const navbar = document.getElementById('navbar');
+
+      document.onclick = function(e){
+         if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+            toggle.classList.remove('active');
+            navbar.classList.remove('active');
+         }
+      }
+
+      toggle.onclick = function(){
+         toggle.classList.toggle('active');
+         navbar.classList.toggle('active');
+      }
+   </script>
+
+
+<main class="main">
+   <div class="container">     
       <div class="title">
          <h1>Чому саме ми</h1>
       </div>
@@ -68,7 +112,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/like.svg">
+               <img src="images/like.svg">
                <h3>Надійність</h3>
             </div>
          </div>
@@ -82,7 +126,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/bez-posrednikov.svg">
+               <img src="images/bez-posrednikov.svg">
                <h3>Без посередників</h3>
             </div>
          </div>
@@ -96,7 +140,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/operativnost.svg">
+               <img src="images/operativnost.svg">
                <h3>Оперативність</h3>
             </div>
          </div>
@@ -110,7 +154,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/oborudovanie.svg">
+               <img src="images/oborudovanie.svg">
                <h3>Обладнання</h3>
             </div>
          </div>
@@ -124,7 +168,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/yuvelirnaya-tochnost.svg">
+               <img src="images/yuvelirnaya-tochnost.svg">
                <h3>Ювелірна точність</h3>
             </div>
          </div>
@@ -138,7 +182,7 @@
       <div class="card">
          <div class="face face1">
             <div class="content">
-               <img src="img/chistota-i-akkuratnost.svg">
+               <img src="images/chistota-i-akkuratnost.svg">
                <h3>Чистота і акуратність</h3>
             </div>
          </div>
@@ -149,5 +193,52 @@
          </div>
       </div>
    </div>
+</main>
+
+
+   <footer class="footer">
+      <div class="container2">
+         <div class="row">
+            <div class="footer-col">
+               <h4>company</h4>
+                  <ul>
+                     <li><a href="#">about us</a></li>
+                     <li><a href="#">our services</a></li>
+                     <li><a href="#">privacy policy</a></li>
+                     <li><a href="#">affiliate program</a></li>
+                  </ul>
+            </div>
+            <div class="footer-col">
+               <h4>get help</h4>
+                  <ul>
+                     <li><a href="#">FAQ</a></li>
+                     <li><a href="#">shipping</a></li>
+                     <li><a href="#">returns</a></li>
+                     <li><a href="#">order status</a></li>
+                     <li><a href="#">payment options</a></li>
+                  </ul>
+            </div>
+            <div class="footer-col">
+               <h4>online shop</h4>
+                  <ul>
+                     <li><a href="#">watch</a></li>
+                     <li><a href="#">bag</a></li>
+                     <li><a href="#">shoes</a></li>
+                     <li><a href="#">dress</a></li>
+                  </ul>
+            </div>
+            <div class="footer-col">
+               <h4>follow us</h4>
+                  <div class="social-links">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-twitter"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+</div>
 </body>
 </html>

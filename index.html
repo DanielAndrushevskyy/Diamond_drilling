@@ -1,69 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/slick.css">
+   <link rel="stylesheet" href="css/jquery.fancybox.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <header id="header">
-      <a href="#" class="logo">Logo</a>
-      <div id="toggle"></div>
-      <div id="navbar">
-      <ul>
-         <li><a href="#home">Home</a></li>
-         <li><a href="#about">About</a></li>
-         <li><a href="#preference">Переваги</a></li>
-         <li><a href="#team">Team</a></li>
-         <li><a href="#portfolio">Portfolio</a></li>
-         <li><a href="#contact">Contact</a></li>
-      </ul>
-      </div>
+   
+   <header class="header">
+
+   <a class="logo" href="#">
+      <img class="logo__img" rc="#" alt="logo">
+   </a>
+   <h6 class="header__subtitle">
+      Зеленый тариф для дома и бизнеса
+   </h6>
+   <h1 class="header__title">
+      Солнечная электростанция
+      <span>
+         с доходом от 1000 $ в месяц
+      </span>
+   </h1>
+
+   <a class="header__button button" href="#">
+      <span>
+         записаться на консультацию
+      </span>
+   </a>
    </header>
-   
-   
-   <section id="home"><iframe id="home" src="home.html" frameborder="0"></iframe></section>
-   <section id="about">About</section>
-   <section id="preference"><iframe id="preference" src="preference.html" frameborder="0"></iframe></section>
-   <section id="team">Team</section>
-   <section id="portfolio">Portfolio</section>
-   <section id="contact">Contact</section>
 
-   <script>
-      const header = document.getElementById('header')
-      const toggle = document.getElementById('toggle');
-      const navbar = document.getElementById('navbar');
-
-      document.onclick = function(e){
-         if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
-            toggle.classList.remove('active');
-            navbar.classList.remove('active');
-         }
-      }
-
-      toggle.onclick = function(){
-         toggle.classList.toggle('active');
-         navbar.classList.toggle('active');
-      }
-   </script>
-
-<!-- <button onclick="changeStuff()">Change Stuff</button> -->
-<!-- <iframe id="home" src="home.html" frameborder="0"></iframe> -->
-
-<!-- <script>
-   const myIframe = document.getElementById("home");
-   function changeStuff () {
-      const iframeWindow = myIframe.contentWindow;
-      const iframeDocument = myIframe.contentDocument;
-
-      console.log(iframeWindow.document);
-   }
-</script> -->
-
+   <script src="js/slick.min.js"></script>
+   <script src="js/jquery.fancybox.min.js"></script>
+   <script src="js/main.js"></script>
 </body>
-</html
+</html>
 
 
 
